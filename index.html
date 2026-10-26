@@ -152,49 +152,11 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
 <script>
 // ── PLAN ──
 const PLAN = [
-  { day:'Lunes', type:'Pesas', name:'Lunes — Pesas', blocks:[
-    { type:'bloque', rest:120, exercises:[{ name:'Peso muerto rumano', sets:4, reps:'6-8', plannedWeight:40 }]},
-    { type:'bloque', rest:90,  exercises:[{ name:'Dominadas', sets:4, reps:'6-8', plannedWeight:0 }]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Flexiones', sets:3, reps:'8-12', plannedWeight:0 },
-      { name:'Aperturas', sets:3, reps:'12-15', plannedWeight:10 },
-    ]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Bíceps', sets:3, reps:'10-12', plannedWeight:12 },
-      { name:'Press militar', sets:3, reps:'8-10', plannedWeight:20 },
-    ]},
-    { type:'bloque', rest:60, exercises:[{ name:'Remo al mentón', sets:3, reps:'10-12', plannedWeight:15 }]},
-  ]},
-  { day:'Martes', type:'Cardio', name:'Martes — Cardio',
-    cardio:{ duration:60, zones:['Z3','Tempo Z4','HIIT 4x4'], notes:'Bicicleta estática. Alterna Z3, Tempo 20\' Z4 o HIIT 4x4.' }},
-  { day:'Miércoles', type:'Pesas', name:'Miércoles — Pesas', blocks:[
-    { type:'bloque', rest:120, exercises:[{ name:'Zancadas lastradas', sets:4, reps:'8-10', plannedWeight:16 }]},
-    { type:'bloque', rest:90,  exercises:[{ name:'Dominadas lastradas', sets:4, reps:'5-7', plannedWeight:5 }]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Press militar', sets:3, reps:'8-10', plannedWeight:20 },
-      { name:'Face pull', sets:3, reps:'15', plannedWeight:10 },
-    ]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Remo al mentón', sets:3, reps:'10-12', plannedWeight:15 },
-      { name:'Tríceps', sets:3, reps:'10-12', plannedWeight:12 },
-    ]},
-  ]},
-  { day:'Jueves', type:'Cardio', name:'Jueves — Cardio',
-    cardio:{ duration:60, zones:['Z3','Tempo Z4','HIIT 4x4'], notes:'Bicicleta estática. Alterna Z3, Tempo 20\' Z4 o HIIT 4x4.' }},
-  { day:'Viernes', type:'Pesas', name:'Viernes — Pesas', blocks:[
-    { type:'bloque', rest:120, exercises:[{ name:'Sentadillas', sets:4, reps:'6-8', plannedWeight:40 }]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Banco inclinado', sets:3, reps:'8-10', plannedWeight:20 },
-      { name:'Remo', sets:3, reps:'8-10', plannedWeight:25 },
-    ]},
-    { type:'superserie', rest:60, exercises:[
-      { name:'Bíceps', sets:3, reps:'10-12', plannedWeight:12 },
-      { name:'Tríceps', sets:3, reps:'10-12', plannedWeight:12 },
-    ]},
-    { type:'bloque', rest:60, exercises:[{ name:'Face pull', sets:3, reps:'15', plannedWeight:10 }]},
-  ]},
-  { day:'Sábado', type:'Cardio', name:'Sábado — Cardio (opcional)',
-    cardio:{ duration:60, zones:['Z2'], notes:'Bicicleta estática suave. Z2 puro — debes poder mantener conversación.' }},
+  {"day":"Lunes","type":"Cardio","name":"Lunes — Carrera tempo","cardio":{"duration":40,"zones":["Tempo"],"notes":"Cinta: 10 min de calentamiento + 20–30 min a ritmo fuerte sostenible."}},
+  {"day":"Martes","type":"Pesas","name":"Martes — Fuerza A","blocks":[{"type":"bloque","rest":120,"exercises":[{"name":"Zancadas","sets":4,"reps":"8-12","plannedWeight":16}]},{"type":"bloque","rest":90,"exercises":[{"name":"Press banca máquina","sets":4,"reps":"8-12","plannedWeight":0}]},{"type":"bloque","rest":120,"exercises":[{"name":"Dominadas","sets":4,"reps":"6-10","plannedWeight":0}]},{"type":"bloque","rest":60,"exercises":[{"name":"Face pull","sets":4,"reps":"12-20","plannedWeight":10}]},{"type":"bloque","rest":60,"exercises":[{"name":"Remo al mentón","sets":4,"reps":"10-12","plannedWeight":15}]},{"type":"bloque","rest":60,"exercises":[{"name":"Bíceps","sets":4,"reps":"10-12","plannedWeight":12}]},{"type":"bloque","rest":60,"exercises":[{"name":"Tríceps","sets":4,"reps":"10-12","plannedWeight":12}]}]},
+  {"day":"Miércoles","type":"Cardio","name":"Miércoles — Carrera aeróbica","cardio":{"duration":60,"zones":["Aeróbico"],"notes":"Cinta: 60 min a 140–150 ppm, ajustando el ritmo para poder mantener la técnica y una intensidad sostenible."}},
+  {"day":"Jueves","type":"Pesas","name":"Jueves — Fuerza B","blocks":[{"type":"bloque","rest":120,"exercises":[{"name":"Peso muerto rumano","sets":4,"reps":"6-10","plannedWeight":40}]},{"type":"bloque","rest":90,"exercises":[{"name":"Fondos","sets":4,"reps":"6-12","plannedWeight":0}]},{"type":"bloque","rest":90,"exercises":[{"name":"Remo máquina","sets":4,"reps":"8-12","plannedWeight":25}]},{"type":"bloque","rest":90,"exercises":[{"name":"Press militar","sets":4,"reps":"8-12","plannedWeight":20}]},{"type":"bloque","rest":60,"exercises":[{"name":"Remo al mentón","sets":4,"reps":"10-12","plannedWeight":15}]},{"type":"bloque","rest":60,"exercises":[{"name":"Bíceps","sets":4,"reps":"10-12","plannedWeight":12}]},{"type":"bloque","rest":60,"exercises":[{"name":"Tríceps","sets":4,"reps":"10-12","plannedWeight":12}]}]},
+  {"day":"Viernes","type":"Cardio","name":"Viernes — Zona 2","cardio":{"duration":60,"zones":["Z2"],"notes":"Cinta: cardio en zona 2 a ritmo conversacional; duración orientativa 45–60 min."}}
 ];
 
 // ── STATE ──
@@ -203,6 +165,7 @@ function initState() {
   return { tab:'hoy', dayIndex:0, activeWorkout:null, logs:{}, restTimer:null, activeExIdx:0, progression:{}, history:[], cardioHistory:[], histSubtab:'resumen', chartExercise:null };
 }
 let S = (() => { try { const r = localStorage.getItem(SK); return r ? JSON.parse(r) : initState(); } catch(e) { return initState(); } })();
+if (!Number.isInteger(S.dayIndex) || S.dayIndex < 0 || S.dayIndex >= PLAN.length) S.dayIndex = 0;
 
 function save() { try { localStorage.setItem(SK, JSON.stringify(S)); } catch(e) {} }
 
@@ -279,7 +242,7 @@ function renderHoy() {
       return '<span class="zone-pill '+c+'">'+z+'</span>';
     }).join('');
     el.innerHTML='<div class="card" style="background:linear-gradient(135deg,#0f1f3d,#0f1623);border-color:#1e3a6e;">'+
-      '<div class="lbl">Cardio</div><div class="card-title">🚴 Bicicleta estática</div>'+
+      '<div class="lbl">Cardio</div><div class="card-title">🏃 Cinta de correr</div>'+
       '<div style="margin-top:8px;">'+zones+'</div>'+
       '<div style="color:var(--muted2);font-size:14px;margin-top:12px;line-height:1.5;">'+day.cardio.notes+'</div>'+
       '<div style="color:var(--muted2);font-size:13px;margin-top:6px;">'+day.cardio.duration+' min</div>'+
@@ -306,7 +269,7 @@ function renderPlan() {
     if (day.type==='Cardio') {
       const zones=(day.cardio.zones||[]).map(z=>{const c=z.includes('HIIT')?'hiit':z==='Z2'?'z2':z.includes('Z4')?'z4':'z3';return '<span class="zone-pill '+c+'">'+z+'</span>';}).join('');
       return '<div class="card" style="background:linear-gradient(135deg,#0f1f3d,#0f1623);border-color:#1e3a6e;">'+
-        '<div class="lbl">'+day.day+' — Cardio</div><div class="card-title">🚴 '+day.cardio.duration+' min</div>'+
+        '<div class="lbl">'+day.day+' — Cardio</div><div class="card-title">🏃 '+day.cardio.duration+' min</div>'+
         '<div style="margin-top:6px;">'+zones+'</div>'+
         '<div style="color:var(--muted2);font-size:13px;margin-top:8px;">'+day.cardio.notes+'</div></div>';
     }
@@ -660,7 +623,7 @@ function renderEntreno() {
     return;
   }
   if (S.activeWorkout.type==='Cardio') {
-    el.innerHTML='<div class="card"><div class="card-title">🚴 Sesión de cardio</div>'+
+    el.innerHTML='<div class="card"><div class="card-title">🏃 Sesión de cardio</div>'+
       '<div style="color:var(--muted2);margin-top:8px;">'+S.activeWorkout.cardio.notes+'</div>'+
       '<button class="start-btn" style="background:var(--green);" onclick="finishCardio()">Guardar sesión</button>'+
       '<button class="start-btn" style="background:transparent;border:1px solid var(--border);color:var(--muted2);margin-top:8px;" onclick="cancelWorkout()">Cancelar</button></div>';
